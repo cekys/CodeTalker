@@ -2,6 +2,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 nav {
     display: flex;
     background-color: blueviolet;
@@ -54,3 +59,4 @@ body .roll_to_top img {
     right:5%;
     bottom:5%;
 }
+

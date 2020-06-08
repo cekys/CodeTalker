@@ -9,16 +9,16 @@
 
 <body>
     <div class="container">
+        <img src="img/logo.png" alt="logo">
         <header>
-            <img src="img/logo.png" alt="logo">
-            <nav v-bind:class="active">
+            <nav v-bind:class= active>
                 <a href="#home" class="home" v-on:click="navActive('home')">home</a>
                 <a href="#qr" class="qr" v-on:click="navActive('qr')">qr</a>
                 <a href="#url" class="url" v-on:click="navActive('url')">url</a>
                 <a href="#encrypt" class="encrypt" v-on:click="navActive('encrypt')">encrypt</a>
             </nav>
         </header>
-        <artice>
+        <article>
             <div id="home">
                 <p>home</p>
             </div>
@@ -31,9 +31,9 @@
             <div id="encrypt">
                 <p>encrypt</p>
             </div>
-        </artice>
+        </article>
         <footer>
-            <p>版权信息</p>
+            <p>Copyright</p>
         </footer>
     </div>
     <div class="roll_to_top">
