@@ -36,11 +36,14 @@
             <p>版权信息</p>
         </footer>
     </div>
+    <div class="roll_to_top">
+        <img src="img/up-chevron-button.png" alt="up" v-on:click="rollToTop()">
+    </div>
 </body>
 <script>
     let nav_vm = new Vue(
         {
-            el: "header",
+            el: ".container",
             data: {
                 active: "home"
             },
@@ -51,6 +54,17 @@
             }
         }
     );
+    let roll_to_top = new Vue(
+        {
+            el: ".roll_to_top",
+            methods: {
+                rollToTop: function () {
+                    window.scrollTo(0, 0)
+                }
+            }
+
+        }
+    )
 </script>
 
 </html>
