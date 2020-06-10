@@ -8,10 +8,6 @@ header {
     top: 0;
 }
 
-header a img:hover {
-    animation-play-state: running;
-}
-
 nav {
     display: flex;
     background-color: blueviolet;
