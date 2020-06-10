@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/vue.js" type="text/javascript" defer></script>
+    <script src="js/scripts.js" type="text/javascript" defer></script>
     <title>Code Talker</title>
 </head>
 
@@ -35,36 +36,10 @@
         <footer>
             <p>Copyright</p>
         </footer>
-    </div>
-    <div class="roll_to_top">
-        <img src="img/up-chevron-button.png" alt="up" v-on:click="rollToTop()">
+        <div class="fixed-btn">
+            <img src="img/up.png" alt="up" v-on:click="rollToTop()">
+        </div>
     </div>
 </body>
-<script>
-    let nav_vm = new Vue(
-        {
-            el: ".container",
-            data: {
-                active: "home"
-            },
-            methods: {
-                navActive: function (item) {
-                    this.active = item
-                }
-            }
-        }
-    );
-    let roll_to_top = new Vue(
-        {
-            el: ".roll_to_top",
-            methods: {
-                rollToTop: function () {
-                    window.scrollTo(0, 0)
-                }
-            }
-
-        }
-    )
-</script>
 
 </html>
