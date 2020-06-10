@@ -10,18 +10,20 @@
 
 <body>
     <div class="container">
-        <img src="img/logo.png" alt="logo">
         <header>
-            <nav v-bind:class= active>
+            <img src="img/logo.png" alt="logo">
+            <nav v-bind:class=active>
                 <a href="#home" class="home" v-on:click="navActive('home')">home</a>
                 <a href="#qr" class="qr" v-on:click="navActive('qr')">qr</a>
                 <a href="#url" class="url" v-on:click="navActive('url')">url</a>
                 <a href="#encrypt" class="encrypt" v-on:click="navActive('encrypt')">encrypt</a>
             </nav>
         </header>
-        <article>
+        <article v-bind:class=active>
             <div id="home">
-                <p>home</p>
+                <p>欢迎来到我的web app！</p>
+                <p>本网站名称来自mgsv中寄生虫学家code talker。</p>
+                <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
             </div>
             <div id="qr">
                 <p>qr</p>
