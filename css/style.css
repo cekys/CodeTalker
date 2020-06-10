@@ -8,6 +8,10 @@ header {
     top: 0;
 }
 
+header a img:hover {
+    animation-play-state: running;
+}
+
 nav {
     display: flex;
     background-color: blueviolet;
@@ -41,7 +45,7 @@ nav a:hover {
 nav.home .home,
 nav.qr .qr,
 nav.url .url,
-nav.encrypt .encrypt {
+nav.aes .aes {
     background-color: deeppink;
 }
 
@@ -49,7 +53,7 @@ nav.encrypt .encrypt {
 #home,
 #qr,
 #url,
-#encrypt {
+#aes {
     border: 1px solid #F00;
     width: 100%;
     height: 65vh;
@@ -57,16 +61,16 @@ nav.encrypt .encrypt {
 
 article.home #qr,
 article.home #url,
-article.home #encrypt,
+article.home #aes,
 article.qr #home,
 article.qr #url,
-article.qr #encrypt,
+article.qr #aes,
 article.url #home,
 article.url #qr,
-article.url #encrypt,
-article.encrypt #home,
-article.encrypt #qr,
-article.encrypt #url {
+article.url #aes,
+article.aes #home,
+article.aes #qr,
+article.aes #url {
     display: none;
 }
 
@@ -74,6 +78,6 @@ body .fixed-btn {
     position: fixed;
     right: 1%;
     bottom: 5%;
-    background-color: rgb(101, 214, 101);
-    border: 1px solid #eee;
+    background-color: blueviolet;
+    border: 1px solid gainsboro;
 }

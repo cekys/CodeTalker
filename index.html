@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script src="js/qrcode.min.js" type="text/javascript"></script>
+    <script src="js/base64.min.js" type="text/javascript"></script>
     <script src="js/vue.js" type="text/javascript" defer></script>
-    <script src="js/scripts.js" type="text/javascript" defer></script>
+    <script src="js/vue.scripts.js" type="text/javascript" defer></script>
     <title>Code Talker</title>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <img src="img/logo.png" alt="logo">
+            <a href="javascript:void(0)" v-on:click="navActive('home')"><img src="img/logo.png" alt="logo"></a>
             <nav v-bind:class=active>
-                <a href="#home" class="home" v-on:click="navActive('home')">home</a>
-                <a href="#qr" class="qr" v-on:click="navActive('qr')">qr</a>
-                <a href="#url" class="url" v-on:click="navActive('url')">url</a>
-                <a href="#encrypt" class="encrypt" v-on:click="navActive('encrypt')">encrypt</a>
+                <a href="javascript:void(0)" class="home" v-on:click="navActive('home')">home</a>
+                <a href="javascript:void(0)" class="qr" v-on:click="navActive('qr')">qr</a>
+                <a href="javascript:void(0)" class="url" v-on:click="navActive('url')">url</a>
+                <a href="javascript:void(0)" class="aes" v-on:click="navActive('aes')">aes</a>
             </nav>
         </header>
         <article v-bind:class=active>
@@ -31,15 +34,15 @@
             <div id="url">
                 <p>url</p>
             </div>
-            <div id="encrypt">
-                <p>encrypt</p>
+            <div id="aes">
+                <p>aes</p>
             </div>
         </article>
         <footer>
             <p>Copyright</p>
         </footer>
         <div class="fixed-btn">
-            <img src="img/up.png" alt="up" v-on:click="rollToTop()">
+            <a href="javascript:void(0)" v-on:click="rollToTop()"><img src="img/up.png" alt="up"></a>
         </div>
     </div>
 </body>
