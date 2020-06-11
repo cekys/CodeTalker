@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/scripts.js" type="text/javascript"></script>
     <script src="js/qrcode.min.js" type="text/javascript"></script>
     <script src="js/base64.min.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
     <script src="js/vue.js" type="text/javascript" defer></script>
     <script src="js/vue.scripts.js" type="text/javascript" defer></script>
     <title>Code Talker</title>
@@ -13,8 +13,10 @@
 
 <body>
     <div class="container">
-        <header>
+        <div>
             <a href="javascript:void(0)" v-on:click="navActive('home')"><img src="img/logo.png" alt="logo"></a>
+        </div>
+        <header>
             <nav v-bind:class=active>
                 <a href="javascript:void(0)" class="home" v-on:click="navActive('home')">home</a>
                 <a href="javascript:void(0)" class="qr" v-on:click="navActive('qr')">qr</a>
@@ -29,7 +31,13 @@
                 <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
             </div>
             <div id="qr">
-                <p>qr</p>
+                <div>
+                    <div id="qrcode" style="height: 50vh;"></div>
+                    <div></div>
+                </div>
+                <div>
+                    <button type="button">QR 生成</button>
+                </div>
             </div>
             <div id="url">
                 <p>url</p>
@@ -46,5 +54,16 @@
         </div>
     </div>
 </body>
+
+<script>
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 128,
+        height: 128,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+</script>
 
 </html>

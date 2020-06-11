@@ -1,7 +1,7 @@
 let vm = new Vue({
     el: ".container",
     data: {
-        active: "home"
+        active: "qr"
     },
     methods: {
         navActive: function (item) {
