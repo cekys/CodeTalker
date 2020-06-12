@@ -6,4 +6,4 @@
 
 ## js qr
 
-- https://github.com/davidshimjs/qrcodejs
+- https://github.com/ushelp/EasyQRCodeJS

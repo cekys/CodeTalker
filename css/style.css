@@ -77,3 +77,22 @@ body .fixed-btn {
     background-color: blueviolet;
     border: 1px solid gainsboro;
 }
+
+
+#qr {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.qrdiv1 {
+    flex: 1;
+    flex-direction: column;
+    align-self: center;
+}
+
+.qrdiv2 {
+    flex: 1;
+    flex-direction: column;
+    align-self: flex-start;
+}
