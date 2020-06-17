@@ -3,11 +3,13 @@ body {
     scroll-behavior: smooth;
 }
 
+/*顶栏*/
 header {
     position: sticky;
     top: 0;
 }
 
+/*导航栏盒模型*/
 nav {
     display: flex;
     background-color: blueviolet;
@@ -16,20 +18,19 @@ nav {
 }
 
 nav a {
-    flex: auto;
+    flex: 1;
     padding: 16px;
     color: white;
     background-color: transparent;
 
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
-    -webkit-transition: background-color 0.25s;
-    -moz-transition: background-color 0.25s;
+    /*颜色渐变动画延时*/
     transition: background-color 0.25s;
 }
 
@@ -38,6 +39,7 @@ nav a:hover {
     background-color: purple;
 }
 
+/*功能性 选中栏目变色*/
 nav.home .home,
 nav.qr .qr,
 nav.url .url,
@@ -45,7 +47,7 @@ nav.aes .aes {
     background-color: deeppink;
 }
 
-
+/*暂时使用显示栏目框*/
 #home,
 #qr,
 #url,
@@ -55,6 +57,7 @@ nav.aes .aes {
     height: 65vh;
 }
 
+/*功能性 隐藏未选择的栏目*/
 article.home #qr,
 article.home #url,
 article.home #aes,
@@ -70,6 +73,7 @@ article.aes #url {
     display: none;
 }
 
+/*功能性 固定位置返回顶部图标*/
 body .fixed-btn {
     position: fixed;
     right: 1%;
@@ -85,13 +89,13 @@ body .fixed-btn {
     flex-direction: row;
 }
 
-.qrdiv1 {
+.qrDiv1 {
     flex: 1;
     flex-direction: column;
     align-self: center;
 }
 
-.qrdiv2 {
+.qrDiv2 {
     flex: 1;
     flex-direction: column;
     align-self: flex-start;

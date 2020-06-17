@@ -28,8 +28,8 @@ function getQueryString(name) {
     return null;
 }
 
-var options = {
-    text: "document.getElementById(qrcontents).innerText"
+let options = {
+    text: "document.getElementById(qrContents).innerText"
 }
 
-new QRCode(document.getElementById("qrcode"), options);
+new QRCode(document.getElementById("qrCode"), options);

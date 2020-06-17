@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <div>
+        <div id="logo">
             <a href="javascript:void(0)" v-on:click="navActive('home')"><img src="img/logo.png" alt="logo"></a>
         </div>
         <header>
@@ -26,16 +26,16 @@
         <article v-bind:class=active>
             <div id="home">
                 <p>欢迎来到我的web app！</p>
-                <p>本网站名称来自mgsv中寄生虫学家code talker。</p>
+                <p>本网站名称来自MGSV中寄生虫学家code talker。</p>
                 <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
             </div>
             <div id="qr">
-                <div class="qrdiv1">
-                    <div id="qrcode"></div>
+                <div class="qrDiv1">
+                    <div id="qrCode"></div>
                 </div>
-                <div class="qrdiv2">
-                    <div><label for="qrcontents">INPUT WHAT YOU WANT</label></div>
-                    <div><textarea id="qrcontents" name="qrcontents"></textarea></div>
+                <div class="qrDiv2">
+                    <div><label for="qrContents">INPUT WHAT YOU WANT</label></div>
+                    <div><textarea id="qrContents" name="qrContents"></textarea></div>
                     <div><button type="button">QR 生成</button></div>
                 </div>
             </div>
@@ -54,16 +54,5 @@
         </div>
     </div>
 </body>
-
-<script>
-    var qrcode = new QRCode(document.getElementById("qrcode"), {
-        text: "http://jindo.dev.naver.com/collie",
-        width: 128,
-        height: 128,
-        colorDark: "#301010",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-    });
-</script>
 
 </html>
