@@ -11,48 +11,50 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="logo">
-            <a href="javascript:void(0)" v-on:click="navActive('home')"><img src="img/logo.png" alt="logo"></a>
-        </div>
-        <header>
-            <nav v-bind:class=active>
-                <a href="javascript:void(0)" class="home" v-on:click="navActive('home')">home</a>
-                <a href="javascript:void(0)" class="qr" v-on:click="navActive('qr')">qr</a>
-                <a href="javascript:void(0)" class="url" v-on:click="navActive('url')">url</a>
-                <a href="javascript:void(0)" class="aes" v-on:click="navActive('aes')">aes</a>
-            </nav>
-        </header>
-        <article v-bind:class=active>
-            <div id="home">
-                <p>欢迎来到我的web app！</p>
-                <p>本网站名称来自MGSV中寄生虫学家code talker。</p>
-                <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
-            </div>
-            <div id="qr">
-                <div class="qrDiv1">
-                    <div id="qrCode"></div>
-                </div>
-                <div class="qrDiv2">
-                    <div><label for="qrContents">INPUT WHAT YOU WANT</label></div>
-                    <div><textarea id="qrContents" name="qrContents"></textarea></div>
-                    <div><button type="button">QR 生成</button></div>
-                </div>
-            </div>
-            <div id="url">
-                <p>url</p>
-            </div>
-            <div id="aes">
-                <p>aes</p>
-            </div>
-        </article>
-        <footer>
-            <p>Copyright</p>
-        </footer>
-        <div class="fixed-btn">
-            <a href="javascript:void(0)" v-on:click="rollToTop()"><img src="img/up.png" alt="up"></a>
-        </div>
+<div class="container">
+    <div id="logo">
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
     </div>
+    <header>
+        <nav v-bind:class=active>
+            <a href="javascript:void(0)" class="home" v-on:click="navActive('home')">home</a>
+            <a href="javascript:void(0)" class="qr" v-on:click="navActive('qr')">qr</a>
+            <a href="javascript:void(0)" class="url" v-on:click="navActive('url')">url</a>
+            <a href="javascript:void(0)" class="aes" v-on:click="navActive('aes')">aes</a>
+        </nav>
+    </header>
+    <article v-bind:class=active>
+        <div id="home">
+            <p>欢迎来到我的web app！</p>
+            <p>本网站名称来自MGSV中寄生虫学家code talker。</p>
+            <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
+        </div>
+        <div id="qr">
+            <div class="qrDiv1">
+                <div id="qrCode"></div>
+            </div>
+            <div class="qrDiv2">
+                <div><label for="qrContents">INPUT WHAT YOU WANT</label></div>
+                <div><textarea id="qrContents" name="qrContents"></textarea></div>
+                <div>
+                    <button type="button">QR 生成</button>
+                </div>
+            </div>
+        </div>
+        <div id="url">
+            <p>url</p>
+        </div>
+        <div id="aes">
+            <p>aes</p>
+        </div>
+    </article>
+    <footer>
+        <p>Copyright</p>
+    </footer>
+    <div class="fixed-btn">
+        <a href="javascript:void(0)" v-on:click="rollToTop()"><img src="img/up.png" alt="up"></a>
+    </div>
+</div>
 </body>
 
 </html>
