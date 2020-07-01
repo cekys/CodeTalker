@@ -1,8 +1,8 @@
-// vue
+// vue js
 let vm = new Vue({
     el: ".container",
     data: {
-        active: "aes"
+        active: "home"
     },
     methods: {
         navActive: function (item) {

@@ -1,42 +1,24 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    scroll-behavior: smooth;
 }
 
-/*顶栏*/
-header {
-    position: sticky;
-    top: 0;
-}
-
-/*导航栏盒模型*/
 nav {
     display: flex;
-    background-color: blueviolet;
-    box-shadow: 0 5px 5px darkgray;
-    border-radius: 2px;
+    align-items: center;
+    box-shadow: 2px 2px 2px darkgray;
 }
 
 nav a {
     flex: 1;
-    padding: 16px;
-    color: white;
-    background-color: transparent;
-
-    font-size: 22px;
-    font-weight: bold;
-
-    text-align: center;
     text-decoration: none;
+    text-align: center;
+    font-size: larger;
     text-transform: uppercase;
-
-    /*颜色渐变动画延时*/
-    transition: background-color 0.25s;
 }
 
 nav a:hover {
-    color: whitesmoke;
-    background-color: purple;
+    color: orangered;
+    text-decoration: none;
 }
 
 /*功能性 选中栏目变色*/
@@ -44,32 +26,22 @@ nav.home .home,
 nav.qr .qr,
 nav.url .url,
 nav.aes .aes {
-    background-color: deeppink;
-}
-
-/*暂时使用显示栏目框*/
-#home,
-#qr,
-#url,
-#aes {
-    border: 1px solid #F00;
-    width: 100%;
-    height: 65vh;
+    color: orangered;
 }
 
 /*功能性 隐藏未选择的栏目*/
-article.home #qr,
-article.home #url,
-article.home #aes,
-article.qr #home,
-article.qr #url,
-article.qr #aes,
-article.url #home,
-article.url #qr,
-article.url #aes,
-article.aes #home,
-article.aes #qr,
-article.aes #url {
+main.home #qr,
+main.home #url,
+main.home #aes,
+main.qr #home,
+main.qr #url,
+main.qr #aes,
+main.url #home,
+main.url #qr,
+main.url #aes,
+main.aes #home,
+main.aes #qr,
+main.aes #url {
     display: none;
 }
 
@@ -79,5 +51,15 @@ body .fixed-bar {
     right: 1%;
     bottom: 5%;
     background-color: blueviolet;
-    border: 1px solid gainsboro;
+}
+
+#home, #qr, #url, #aes {
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+}
+
+#home article {
+
 }
