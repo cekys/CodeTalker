@@ -2,18 +2,11 @@
 let vm = new Vue({
     el: ".container",
     data: {
-        active: "qr"
+        active: "aes"
     },
     methods: {
         navActive: function (item) {
             this.active = item
-        },
-        rollToTop: function () {
-            window.scrollTo({
-                left: 0,
-                top: 0,
-                behavior: "smooth"
-            })
         }
     }
 });
@@ -28,8 +21,10 @@ function getQueryString(name) {
     return null;
 }
 
-let options = {
-    text: "document.getElementById(qrContents).innerText"
+function rollToTop() {
+    window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: "smooth"
+    });
 }
-
-new QRCode(document.getElementById("qrCode"), options);

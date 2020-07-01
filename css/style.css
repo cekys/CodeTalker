@@ -74,29 +74,10 @@ article.aes #url {
 }
 
 /*功能性 固定位置返回顶部图标*/
-body .fixed-btn {
+body .fixed-bar {
     position: fixed;
     right: 1%;
     bottom: 5%;
     background-color: blueviolet;
     border: 1px solid gainsboro;
-}
-
-
-#qr {
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-}
-
-.qrDiv1 {
-    flex: 1;
-    flex-direction: column;
-    align-self: center;
-}
-
-.qrDiv2 {
-    flex: 1;
-    flex-direction: column;
-    align-self: flex-start;
 }

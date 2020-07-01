@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/easy.qrcode.min.js" type="text/javascript"></script>
     <script src="js/base64.min.js" type="text/javascript"></script>
-    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/vue.min.js" type="text/javascript"></script>
     <script src="js/scripts.js" type="text/javascript" defer></script>
     <title>Code Talker</title>
 </head>
@@ -30,28 +30,57 @@
             <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
         </div>
         <div id="qr">
-            <div class="qrDiv1">
-                <div id="qrCode"></div>
+            <div class="qr-input-area">
+                <label for="qr-input-box">输入框</label>
+                <textarea name="qr-input-box" id="qr-input-box" cols="30" rows="10"></textarea>
             </div>
-            <div class="qrDiv2">
-                <div><label for="qrContents">INPUT WHAT YOU WANT</label></div>
-                <div><textarea id="qrContents" name="qrContents"></textarea></div>
-                <div>
-                    <button type="button">QR 生成</button>
+            <div class="qr-display-area">
+                <div class="qr-display-box">
+                    <canvas id="qr-canvas" width="99 vh" height="30 vh" style="background-color: #FF0000"></canvas>
+                </div>
+                <div class="qr-option-area">
+                    <button class="button-s" type="button">生成二维码</button>
+                    <button class="button-s" type="button">清空</button>
                 </div>
             </div>
         </div>
         <div id="url">
-            <p>url</p>
+            <div>
+                <label for="url-input-box"></label>
+                <textarea name="url-input-box" id="url-input-box" cols="30" rows="15"></textarea>
+            </div>
+            <div>
+                <button class="button-s" type="button">加密</button>
+                <button class="button-s" type="button">解密</button>
+                <button class="button-s" type="button">清空</button>
+            </div>
         </div>
         <div id="aes">
-            <p>aes</p>
+            <div>
+                <label for="aes-input-box"></label>
+                <textarea name="aes-input-box" id="aes-input-box" cols="30" rows="15"></textarea>
+            </div>
+            <div>
+                <form>
+                    <label for="aes-mode">aes加密方式：</label>
+                    <select id="aes-mode">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <label for="aes-key">密钥：</label>
+                    <input type="text" name="key" id="aes-key" value="">
+                    <button class="button-s" type="button">加密</button>
+                    <button class="button-s" type="button">解密</button>
+                    <button class="button-s" type="button">清空</button>
+                </form>
+            </div>
         </div>
     </article>
     <footer>
-        <p>Copyright</p>
+        <p><small>Copyright</small></p>
     </footer>
-    <div class="fixed-btn">
+    <div class="fixed-bar">
         <a href="javascript:void(0)" v-on:click="rollToTop()"><img src="img/up.png" alt="up"></a>
     </div>
 </div>
