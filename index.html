@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
         <nav v-bind:class=active>
             <a href="index.html"><img alt="logo" src="img/logo.png"></a>
@@ -35,7 +35,7 @@
                 <label for="qr-input-box">输入框</label>
                 <textarea cols="30" id="qr-input-box" name="qr-input-box" rows="10"></textarea>
             </div>
-            <div class="qr-display-area">
+            <div class="container">
                 <div class="qr-display-box">
                     <canvas height="30 vh" id="qr-canvas" style="background-color: #FF0000" width="99 vh"></canvas>
                 </div>

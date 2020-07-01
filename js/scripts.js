@@ -1,6 +1,6 @@
 // vue js
 let vm = new Vue({
-    el: ".container",
+    el: ".container-fluid",
     data: {
         active: "home"
     },
