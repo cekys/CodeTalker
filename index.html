@@ -2,9 +2,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="js/vue.min.js" type="text/javascript"></script>
+    <script src="js/easy.qrcode.min.js" type="text/javascript"></script>
     <script defer src="js/scripts.js" type="text/javascript"></script>
     <title>Code Talker</title>
 </head>
@@ -25,54 +25,53 @@
             <article class="container">
                 <p>欢迎来到我的web app！</p>
                 <p>本网站为学习vue，并在此的基础上现代化改造原有的生成二维码、url加密解密网站并计入aes加密解密功能的网站。</p>
-                <p>第一版预计只使用vue+html+纯js+纯css 的组合来构造，后续版本会继续使用Bootstrap、Angular
+                <p>第一版预计只使用vue+html+js+纯css 的组合来构造，后续版本会继续使用Bootstrap、Angular
                     等框架来对本网站进行更新，也会同时使用go语言和java来编写生成图像与文本转换的服务端代码。</p>
                 <p>个人初学者前后端编程模式，水平有限，如有建议请直接GitHub上提出谢谢。</p>
             </article>
         </div>
         <div id="qr">
             <div style="padding: 0.5em">
-                <textarea class="form-control c-div-textarea" id="qr-input-box" style="height: 70vh;"></textarea>
+                <textarea class="c-div-textarea" id="qr-input-box" style="height: 70vh;"></textarea>
             </div>
             <div style="padding: 0.5em">
-                <div style="height: 60vh;padding: 2.5em;">
-                    <canvas id="qr-canvas" style="background-color: #FF0000;height: 55vh;width: 55vh"></canvas>
+                <div id="qr-code" style="height: 60vh;padding: 2.5em;">
                 </div>
-                <div style="height: 20vh;display: flex;align-items: center;justify-content: center;">
-                    <button class="btn btn-primary" type="button">生成二维码</button>
-                    <button class="btn btn-secondary" type="button">清空</button>
+                <div style="text-align: center;">
+                    <button id="qr-btn" class="btn" type="button">生成二维码</button>
+                    <button id="qr-clear-btn" class="btn" type="button">清空</button>
                 </div>
             </div>
         </div>
         <div id="url">
             <div style="padding: 0.5em">
-                <textarea class="form-control c-div-textarea" id="url-input-box" style="height: 70vh;"></textarea>
+                <textarea class="c-div-textarea" id="url-input-box" style="height: 70vh;"></textarea>
             </div>
             <div style="padding: 0.5em">
-                <button class="btn btn-primary" type="button">加密</button>
-                <button class="btn btn-primary" type="button">解密</button>
-                <button class="btn btn-secondary" type="button">清空</button>
+                <button class="btn" type="button">加密</button>
+                <button class="btn" type="button">解密</button>
+                <button class="btn" type="button">清空</button>
             </div>
         </div>
         <div id="aes">
             <div>
-                <textarea class="form-control c-div-textarea" id="aes-input-box" style="height: 70vh;"></textarea>
+                <textarea class="c-div-textarea" id="aes-input-box" style="height: 70vh;"></textarea>
             </div>
             <div class="c-div">
                 <div style="padding: 0.5em">
                     <label for="aes-mode">aes加密方式：</label>
-                    <select class="form-control" id="aes-mode">
+                    <select id="aes-mode">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
                     <label for="aes-key">密钥：</label>
-                    <input class="form-control" id="aes-key" name="key" type="text" value="">
+                    <input id="aes-key" name="key" type="text" value="">
                 </div>
                 <div style="padding: 0.5em">
-                    <button class="btn btn-primary" type="button">加密</button>
-                    <button class="btn btn-primary" type="button">解密</button>
-                    <button class="btn btn-secondary" type="button">清空</button>
+                    <button class="btn" type="button">加密</button>
+                    <button class="btn" type="button">解密</button>
+                    <button class="btn" type="button">清空</button>
                 </div>
             </div>
         </div>
