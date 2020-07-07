@@ -39,12 +39,13 @@ document.getElementById("qr-clear-btn").addEventListener("click", function () {
     clearText(document.getElementById("qr-input-box"));
 });
 
+document.getElementById("url-clear-btn").addEventListener("click", function () {
+    clearText(document.getElementById("url-input-box"));
+});
+
 
 //QR code 模块
-let options = {
-    text: "qr code"
-};
-let qrcode = new QRCode(document.getElementById("qr-code"), options);
+let qrcode = new QRCode(document.getElementById("qr-code"));
 
 function QRGenerate() {
     let text = document.getElementById("qr-input-box").value;
@@ -54,4 +55,21 @@ function QRGenerate() {
 //生成QRCode点击按钮绑定
 document.getElementById("qr-btn").addEventListener("click", QRGenerate);
 
+
 //URL 模块
+function urlEncode() {
+    let box = document.getElementById("url-input-box");
+    let encode = encodeURI(box.value);
+    box.value = encode;
+}
+
+function urlDecode() {
+    let box = document.getElementById("url-input-box");
+    let decode = decodeURI(box.value);
+    box.value = decode;
+}
+
+//加密url点击事件绑定
+document.getElementById("url-encode-btn").addEventListener("click", urlEncode);
+//解密url点击事件绑定
+document.getElementById("url-decode-btn").addEventListener("click", urlDecode);
